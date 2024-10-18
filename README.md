@@ -1,6 +1,6 @@
 <h1>El muro infernal - videojuego</h1>
 
-<p>El videojuego tendra como trama el programa de television "El muro infernal" o como se llama en brasil "De cara no muro"</p>
+<p>El videojuego tendra como trama el programa de television "El muro infernal" o como se llama en brasil "De cara no muro" el cual consistira en que un personaje debe de colocarse en la misma posicion que una figura de una pared que se va a acercando, si la pared toca al jugador entonces se pierde el juego.</p>
 
 
 
