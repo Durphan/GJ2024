@@ -1,25 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://yetqutcd1dba"]
+[gd_scene load_steps=2 format=3 uid="uid://yetqutcd1dba"]
 
 [ext_resource type="Script" path="res://muro_script.gd" id="1_bsl3e"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6178y"]
-albedo_color = Color(0.847059, 0, 0, 1)
-metallic = 0.21
-roughness = 0.25
-
-[sub_resource type="BoxMesh" id="BoxMesh_rhses"]
-material = SubResource("StandardMaterial3D_6178y")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_gjovs"]
 
 [node name="Muro" type="Node3D"]
 script = ExtResource("1_bsl3e")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["Paredes"]]
-transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("BoxMesh_rhses")
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
 
-[node name="MuroBody" type="CharacterBody3D" parent="MeshInstance3D"]
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="AnimatableBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.96442)
+visible = false
+depth = 7.215
+polygon = PackedVector2Array(0.421876, 2.54815, 0.411028, 3.86803, -0.969628, 3.87954, -0.935111, 2.8498, -1.93609, 3.66093, -2.34453, 3.09141, -1.2285, 1.9121, -1.12772, 0.020884, -17, 0, -17, 8, 15, 8, 15, 0, 0.480115, -0.000412703, 0.426875, 1.63937, 1.51296, 0.915308, 1.88564, 1.35187)
+margin = 5.255
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/MuroBody"]
-shape = SubResource("BoxShape3D_gjovs")
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="AnimatableBody3D"]
+use_collision = true
+polygon = PackedVector2Array(0.421876, 2.54815, 0.411028, 3.86803, -0.969628, 3.87954, -0.935111, 2.8498, -1.93609, 3.66093, -2.34453, 3.09141, -1.2285, 1.9121, -1.12772, 0.020884, -17, 0, -17, 8, 15, 8, 15, 0, 0.480115, -0.000412703, 0.426875, 1.63937, 1.51296, 0.915308, 1.88564, 1.35187)
