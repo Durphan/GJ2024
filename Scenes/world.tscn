@@ -57,7 +57,7 @@ Show cursor - Esc
 "
 
 [node name="Muro" parent="." instance=ExtResource("4_luhai")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15519, 0.0479698, -8.20887)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03808, 0.0479698, -15.6549)
 speed = 0.1
 start_position = Vector3(0, 2, -28)
 end_position = Vector3(0, 2, 20)
@@ -67,3 +67,5 @@ end_position = Vector3(0, 2, 20)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85204, -24.9556, -9.89273)
 shape = SubResource("BoxShape3D_gj5op")
+
+[connection signal="area_entered" from="Area3D" to="Character" method="_on_area_3d_area_entered"]

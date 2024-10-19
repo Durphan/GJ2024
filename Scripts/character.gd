@@ -192,3 +192,9 @@ func brazoIzquierdo(delta:float):
 		
 	brazoIzquierdoPosition = clampf(brazoIzquierdoPosition,-0.8,0.8)
 	$Animated/Armature/Skeleton3D.set_bone_pose_rotation(2,Quaternion(0,0,brazoIzquierdoPosition,1))
+
+
+func _on_area_3d_area_entered(area: Area3D) -> void:
+	game_over() # Replace with function body.
+func game_over():
+	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
