@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://djx5tresmf4aa"]
+
+[ext_resource type="Texture2D" uid="uid://gs6n3sg4t772" path="res://Assets/godot-prototype-texture/PNG/checker_black_512x512.png" id="1_3ml47"]
+[ext_resource type="PackedScene" uid="uid://cd70x3de3pbl4" path="res://Scenes/character.tscn" id="2_ew4qk"]
+[ext_resource type="Material" uid="uid://byhoa2glvt4rq" path="res://Resources/sky.tres" id="3_hnrcy"]
+[ext_resource type="PackedScene" uid="uid://yetqutcd1dba" path="res://Muro_3d.tscn" id="4_luhai"]
+
+[sub_resource type="Sky" id="Sky_khtaw"]
+sky_material = ExtResource("3_hnrcy")
+
+[sub_resource type="Environment" id="Environment_md4pe"]
+background_mode = 2
+sky = SubResource("Sky_khtaw")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xkuno"]
+size = Vector3(200, 1, 200)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjm3o"]
+albedo_texture = ExtResource("1_3ml47")
+uv1_scale = Vector3(60, 45, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4cwcw"]
+size = Vector3(200, 1, 200)
+
+[node name="World" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.216372, 0.976311, 0, -0.976311, -0.216372, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_md4pe")
+
+[node name="Character" parent="." instance=ExtResource("2_ew4qk")]
+transform = Transform3D(1, 0, 7.35137e-08, 0, 1, 0, -7.35137e-08, 0, 1, -18.0233, 3.84924, -8.02514)
+
+[node name="Level" type="Node" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level"]
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, -15.3345, 0, -12.7627)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/StaticBody3D"]
+shape = SubResource("BoxShape3D_xkuno")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/StaticBody3D"]
+material_override = SubResource("StandardMaterial3D_kjm3o")
+mesh = SubResource("BoxMesh_4cwcw")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Walk - WASD
+Jump - Space
+Grab left - Left mouse
+Grab right - Right mouse
+Toggle ragdoll - R
+Show cursor - Esc
+"
+
+[node name="Muro" parent="." instance=ExtResource("4_luhai")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 3, -15.994)
