@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://d7e60gtsv8vc"]
+
+[ext_resource type="Script" path="res://Scripts/button_restart.gd" id="1_r7asa"]
+[ext_resource type="Script" path="res://Scripts/button_exit.gd" id="2_q3du4"]
+
+[node name="game_over" type="Node2D"]
+
+[node name="ButtonRestart" type="Button" parent="."]
+offset_left = 383.0
+offset_top = 265.0
+offset_right = 769.0
+offset_bottom = 336.0
+text = "Restart"
+script = ExtResource("1_r7asa")
+
+[node name="ButtonExit" type="Button" parent="."]
+offset_left = 381.0
+offset_top = 408.0
+offset_right = 772.0
+offset_bottom = 471.0
+text = "Exit"
+script = ExtResource("2_q3du4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 523.0
+offset_top = 172.0
+offset_right = 636.0
+offset_bottom = 200.0
+text = "You have lost"
+
+[connection signal="pressed" from="ButtonRestart" to="ButtonRestart" method="_on_pressed"]
+[connection signal="pressed" from="ButtonExit" to="ButtonExit" method="_on_pressed"]
