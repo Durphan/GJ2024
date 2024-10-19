@@ -15,5 +15,4 @@ func _on_body_entered(body):
 		game_over()
 
 func game_over():
-	#get_tree().change_scene("res://") Aca va a la direccion de la escena del game over
-	print("Game Over")
+	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
