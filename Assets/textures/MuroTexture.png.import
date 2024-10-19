@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwcno7brkubfu"
-path.s3tc="res://.godot/imported/Character_Untitled.png-49f1a35188d5538656a21cde5b4a4e21.s3tc.ctex"
+uid="uid://drgm2c68786rk"
+path.s3tc="res://.godot/imported/MuroTexture.png-35689392e5b87b5933afbe7f3d743352.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "0b5c02510d41c6467e9bdee365e37800"
-}
 
 [deps]
 
-source_file="res://Assets/Character_Untitled.png"
-dest_files=["res://.godot/imported/Character_Untitled.png-49f1a35188d5538656a21cde5b4a4e21.s3tc.ctex"]
+source_file="res://Assets/textures/MuroTexture.png"
+dest_files=["res://.godot/imported/MuroTexture.png-35689392e5b87b5933afbe7f3d743352.s3tc.ctex"]
 
 [params]
 

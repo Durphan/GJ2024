@@ -1,9 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://yetqutcd1dba"]
+[gd_scene load_steps=3 format=3 uid="uid://yetqutcd1dba"]
 
-[ext_resource type="Script" path="res://muro_script.gd" id="1_bsl3e"]
+[ext_resource type="Script" path="res://Scripts/muro_script.gd" id="1_udem2"]
+[ext_resource type="Material" uid="uid://qxtj17j8fkpv" path="res://Assets/materiales/muro-material.tres" id="2_4iwj7"]
 
 [node name="Muro" type="Node3D"]
-script = ExtResource("1_bsl3e")
+script = ExtResource("1_udem2")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
 
@@ -15,5 +16,7 @@ polygon = PackedVector2Array(0.421876, 2.54815, 0.411028, 3.86803, -0.969628, 3.
 margin = 5.255
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="AnimatableBody3D"]
+material_override = ExtResource("2_4iwj7")
 use_collision = true
 polygon = PackedVector2Array(0.421876, 2.54815, 0.411028, 3.86803, -0.969628, 3.87954, -0.935111, 2.8498, -1.93609, 3.66093, -2.34453, 3.09141, -1.2285, 1.9121, -1.12772, 0.020884, -17, 0, -17, 8, 15, 8, 15, 0, 0.480115, -0.000412703, 0.426875, 1.63937, 1.51296, 0.915308, 1.88564, 1.35187)
+material = ExtResource("2_4iwj7")

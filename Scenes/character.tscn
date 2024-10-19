@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://cd70x3de3pbl4"]
 
 [ext_resource type="Script" path="res://Scripts/character.gd" id="1_lo1uq"]
-[ext_resource type="PackedScene" uid="uid://byhwdai31bud7" path="res://Assets/Character.glb" id="1_nfcse"]
+[ext_resource type="PackedScene" uid="uid://byhwdai31bud7" path="res://Assets/modelos3D/Character.glb" id="1_nfcse"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fo83p"]
 size = Vector3(1.165, 1.2, 0.68)
