@@ -1,7 +1,7 @@
 extends Node3D 
 
 var t = 0
-var speed = 0.5
+@export var speed = 0.5
 @export var start_position = Vector3(-18, 3, -22)
 @export var end_position = Vector3(-18, 3, -4)
 

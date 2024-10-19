@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://tajunuwy03bq"
-path="res://.godot/imported/player.glb-08dcfb373480a049995065542e37637b.scn"
+path="res://.godot/imported/player.glb-dfec8c62fd172dc7378f463712e4f192.scn"
 
 [deps]
 
-source_file="res://art/player.glb"
-dest_files=["res://.godot/imported/player.glb-08dcfb373480a049995065542e37637b.scn"]
+source_file="res://game-jam-plus/art/player.glb"
+dest_files=["res://.godot/imported/player.glb-dfec8c62fd172dc7378f463712e4f192.scn"]
 
 [params]
 

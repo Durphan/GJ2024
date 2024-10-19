@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ctvgp36msfjcx"
-path="res://.godot/imported/PERSONAJE.glb-9ac5fe42678694a693ef231db9ed37e2.scn"
+path="res://.godot/imported/PERSONAJE.glb-5be9492d93e6455ec11dfd270f770360.scn"
 
 [deps]
 
-source_file="res://PERSONAJE.glb"
-dest_files=["res://.godot/imported/PERSONAJE.glb-9ac5fe42678694a693ef231db9ed37e2.scn"]
+source_file="res://game-jam-plus/PERSONAJE.glb"
+dest_files=["res://.godot/imported/PERSONAJE.glb-5be9492d93e6455ec11dfd270f770360.scn"]
 
 [params]
 

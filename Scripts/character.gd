@@ -9,7 +9,7 @@ var brazoIzquierdoPosition = 0
 
 # movement/walking/jumping stuff
 const JUMP_STRENGTH = 70
-const SPEED = 50
+const SPEED = 100
 const DAMPING = 0.9
 
 @onready var on_floor_left = $"Physical/Armature/Skeleton3D/Physical Bone LLeg2/OnFloorLeft" # shapecast on the feet to check if its on floor
@@ -182,7 +182,7 @@ func brazoDerecho(delta:float):
 		brazoDerechoPosition -= 1 * delta
 		
 	brazoDerechoPosition = clampf(brazoDerechoPosition,-0.8,0.8)
-	$Animated/Armature/Skeleton3D.set_bone_pose_rotation(2,Quaternion(0,0,brazoDerechoPosition,1))
+	$Animated/Armature/Skeleton3D.set_bone_pose_rotation(6,Quaternion(brazoDerechoPosition,0,0,1))
 	
 func brazoIzquierdo(delta:float):
 	if Input.is_action_pressed("brazo izquierdo derecha"):
@@ -191,4 +191,4 @@ func brazoIzquierdo(delta:float):
 		brazoIzquierdoPosition -= 1 * delta
 		
 	brazoIzquierdoPosition = clampf(brazoIzquierdoPosition,-0.8,0.8)
-	$Animated/Armature/Skeleton3D.set_bone_pose_rotation(6,Quaternion(brazoIzquierdoPosition,0,0,1))
+	$Animated/Armature/Skeleton3D.set_bone_pose_rotation(2,Quaternion(0,0,brazoIzquierdoPosition,1))

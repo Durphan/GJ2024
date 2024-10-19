@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bpu0kkq08ewof"
-path="res://.godot/imported/Brilliant Blorr-Trug.glb-8784b6e56aee56e5b31494b8cac44c0e.scn"
+path="res://.godot/imported/Brilliant Blorr-Trug.glb-a8ca651b52e235e3cafb9753ab8f4ab0.scn"
 
 [deps]
 
-source_file="res://Brilliant Blorr-Trug.glb"
-dest_files=["res://.godot/imported/Brilliant Blorr-Trug.glb-8784b6e56aee56e5b31494b8cac44c0e.scn"]
+source_file="res://game-jam-plus/Brilliant Blorr-Trug.glb"
+dest_files=["res://.godot/imported/Brilliant Blorr-Trug.glb-a8ca651b52e235e3cafb9753ab8f4ab0.scn"]
 
 [params]
 

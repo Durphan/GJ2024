@@ -1,11 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1729354294
+::res://::1729360899
+Archivo de personaje de Among us.blend::PackedScene::9025847652194555430::1729360877::1729360914::1::::<><>::
+Brilliant Blorr-Trug.glb::PackedScene::8628279077689951906::1729360877::1729360914::1::::<><>::
 icon.svg::CompressedTexture2D::2034187682075146634::1724840395::1729351200::1::::<><>::
 muro.glb::PackedScene::267928154581866917::1729352867::1729352867::1::::<><>::
-::res://Assets/::1729355765
+Muro_3d.tscn::PackedScene::1693973033808249518::1729357746::0::1::::<><>::res://muro_script.gd
+muro_script.gd::GDScript::-1::1729357679::0::1::::<>Node3D<>::
+PERSONAJE.glb::PackedScene::4907959589106197713::1729360878::1729360915::1::::<><>::
+README.md::TextFile::-1::1729360878::0::1::::<><>::
+::res://Assets/::1729355772
 Character.glb::PackedScene::4086744720172308094::1724840395::1729351200::1::::<><>::uid://b555y2ydieacn::::res://Resources/character_grab_lower.res<>uid://dledk1p8w8pkk::::res://Resources/character_grab_middle.res<>uid://cah6s8ohr3uh::::res://Resources/character_grab_upper.res<>uid://bhfq5tvn778bu::::res://Resources/character_idle.res<>uid://duv06rhjuabyc::::res://Resources/character_walk.res
-Muro_3d.tscn::PackedScene::-1::1729355684::0::1::::<><>::
-muro_script.gd::GDScript::-1::1729355765::0::1::::<>Node3D<>::
 ::res://Assets/godot-prototype-texture/::1724840395
 ::res://Assets/godot-prototype-texture/PNG/::1729351200
 checker_black_512x512.png::CompressedTexture2D::460198802270228995::1724840395::1729351200::1::::<><>::
@@ -35,17 +39,39 @@ logo_pink_512x512.png::CompressedTexture2D::5482516026174920328::1724840395::172
 logo_red_512x512.png::CompressedTexture2D::1598589586624476617::1724840395::1729351200::1::::<><>::
 logo_white_512x512.png::CompressedTexture2D::333564474430022751::1724840395::1729351200::1::::<><>::
 logo_yellow_512x512.png::CompressedTexture2D::3257961265403761999::1724840395::1729351200::1::::<><>::
-::res://Resources/::1729351219
+::res://game-jam-plus/::1729360878
+Brilliant Blorr-Trug.glb::PackedScene::3482077227233532809::1729360878::1729360906::1::::<><>::
+icon.svg::CompressedTexture2D::109618468816123627::1729360878::1729360905::1::::<><>::
+jugador2.tscn::PackedScene::3421060310177188853::1729360878::0::1::::<><>::
+jugador.gd::GDScript::-1::1729360878::0::1::::<>CharacterBody3D<>::
+jugador.tscn::PackedScene::1958651881388179330::1729360878::0::1::::<><>::uid://tajunuwy03bq::::res://art/player.glb<>res://jugador.gd
+main.tscn::PackedScene::8325471320856854194::1729360878::0::1::::<><>::uid://cyt0pie04ts4w::::res://personajePrincipal.tscn<>uid://lk3xnq7njsrp::::res://pj.glb
+muro grande.tscn::PackedScene::8149937536227263746::1729360878::0::1::::<><>::
+node_3d.tscn::PackedScene::4442998813922018774::1729360878::0::1::::<><>::
+PERSONAJE.glb::PackedScene::6150173937321472007::1729360878::1729360906::1::::<><>::
+personajePrincipal.tscn::PackedScene::6498141931295276864::1729360878::0::1::::<><>::res://personaje_principal.gd<>uid://dj13odq35o4u6::::res://pj_Ch32_1001_Diffuse.png<>uid://df4salhp8x0i2::::res://pj_Ch32_1001_Glossiness.png<>uid://brp5cvbow1cfu::::res://pj_Ch32_1001_Normal.png
+personaje_principal.gd::GDScript::-1::1729360878::0::1::::<>Node3D<>::
+::res://game-jam-plus/art/::1729360878
+body.material::StandardMaterial3D::-1::1729360878::0::1::::<><>::
+eye.material::StandardMaterial3D::-1::1729360878::0::1::::<><>::
+House In a Forest Loop.ogg::AudioStreamOggVorbis::1834188169524379898::1729360878::1729360905::1::::<><>::
+mob.glb::PackedScene::5124750329713099075::1729360878::1729360905::1::::<><>::
+mob_body.material::StandardMaterial3D::-1::1729360878::0::1::::<><>::
+mob_eye.material::StandardMaterial3D::-1::1729360878::0::1::::<><>::
+player.glb::PackedScene::1334170912667917994::1729360878::1729360905::1::::<><>::
+pupil.material::StandardMaterial3D::-1::1729360878::0::1::::<><>::
+::res://Resources/::1729355782
 character_grab_lower.res::Animation::4555883149645491409::1729351200::0::1::::<><>::
 character_grab_middle.res::Animation::7939798241340499938::1729351200::0::1::::<><>::
 character_grab_upper.res::Animation::140859062881481623::1729351200::0::1::::<><>::
 character_idle.res::Animation::2889090554650301594::1729351200::0::1::::<><>::
 character_walk.res::Animation::8607965045251650390::1729351200::0::1::::<><>::
-sky.tres::ShaderMaterial::4086255041110941198::1729351219::0::1::::<><>::
-::res://Scenes/::1729355709
-character.tscn::PackedScene::5051028460017153807::1729355709::0::1::::<><>::res://Scripts/character.gd<>uid://byhwdai31bud7::::res://Assets/Character.glb
+sky.tres::ShaderMaterial::4086255041110941198::1729355782::0::1::::<><>::
+::res://Scenes/::1729357764
 animatable_body_3d.gd::GDScript::-1::1729352427::0::1::::<>AnimatableBody3D<>::
-world.tscn::PackedScene::7840298671942430236::1729355772::0::1::::<><>::uid://gs6n3sg4t772::::res://Assets/godot-prototype-texture/PNG/checker_black_512x512.png<>uid://cd70x3de3pbl4::::res://Scenes/character.tscn<>uid://byhoa2glvt4rq::::res://Resources/sky.tres<>res://Assets/Muro_3d.tscn
-::res://Scripts/::1729355077
+character.tscn::PackedScene::5051028460017153807::1729357746::0::1::::<><>::res://Scripts/character.gd<>uid://byhwdai31bud7::::res://Assets/Character.glb
+world.tscn::PackedScene::7840298671942430236::1729357764::0::1::::<><>::uid://gs6n3sg4t772::::res://Assets/godot-prototype-texture/PNG/checker_black_512x512.png<>uid://cd70x3de3pbl4::::res://Scenes/character.tscn<>uid://byhoa2glvt4rq::::res://Resources/sky.tres<>uid://yetqutcd1dba::::res://Muro_3d.tscn
+::res://Scripts/::1729360878
 CameraPivot.gd::GDScript::-1::1724840395::0::1::::<>Node3D<>::
 character.gd::GDScript::-1::1729355077::0::1::::<>Node3D<>::
+ColisionGameOver.gd::GDScript::-1::1729360878::0::1::::<>CharacterBody3D<>::
