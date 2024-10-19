@@ -13,7 +13,7 @@
 [🟢]: Done [🔴]: To do [🟡] Doing
 <ul>
   <li>Crear el piso [🟢]</li>
-  <li>Escribir la logica del personaje [🟡]</li>
-  <li>Escribir la logica de la pared [🟡]</li>
+  <li>Escribir la logica del personaje [🟢]</li>
+  <li>Escribir la logica de la pared [🟢]</li>
   <li>Escribir la logica para que al chocar se termine el juego [🔴]</li>
 </ul>
