@@ -33,8 +33,6 @@ var physics_bones = [] # all physical bones
 
 @onready var physical_skel : Skeleton3D = $Physical/Armature/Skeleton3D
 @onready var animated_skel : Skeleton3D = $Animated/Armature/Skeleton3D
-@onready var camera_pivot = $CameraPivot
-@onready var animation_tree = $Animated/AnimationTree
 @onready var physical_bone_body : PhysicalBone3D = $"Physical/Armature/Skeleton3D/Physical Bone Body"
 
 
@@ -58,7 +56,7 @@ func _ready():
 	physics_bones = physical_skel.get_children().filter(func(x): return x is PhysicalBone3D) # get all the physical bones
 	
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("ragdoll"): ragdoll_mode = bool(1-int(ragdoll_mode)) # toggle ragdoll mode
 
 	active_arm_left = Input.is_action_pressed("grab_left")# activate left arm with mouse left click
@@ -194,7 +192,7 @@ func brazoIzquierdo(delta:float):
 	$Animated/Armature/Skeleton3D.set_bone_pose_rotation(2,Quaternion(0,0,brazoIzquierdoPosition,1))
 
 
-func _on_area_3d_area_entered(area: Area3D) -> void:
+func _on_area_3d_area_entered(_area: Area3D) -> void:
 	game_over() # Replace with function body.
 func game_over():
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
