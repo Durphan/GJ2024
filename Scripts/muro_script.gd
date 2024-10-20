@@ -11,7 +11,7 @@ var wallList = []
 
 # Se llama cuando el nodo entra al árbol  por primera vez.
 func _ready() -> void:
-
+	
 	wallList.append($AnimatableBody3D/CSGPolygon3D)
 	wallList.append($AnimatableBody3D/CSGPolygon3D2)
 	wallList.append($AnimatableBody3D/CSGPolygon3D3)
@@ -32,6 +32,8 @@ func _physics_process(delta: float) -> void:
 	
 	# Si el muro alcanza la posición final, se elimina
 	if t >= 1:
+		speed += 0.03
+		get_parent().call("incremetarPuntos")
 		aparecerMuroAleatorio()
 		t = 0
 		  # Si quiero eliminar el muro puedo utilizar ""queue_free()"

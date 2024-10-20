@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://djx5tresmf4aa"]
+[gd_scene load_steps=13 format=3 uid="uid://djx5tresmf4aa"]
 
+[ext_resource type="Script" path="res://Scenes/world_controller.gd" id="1_ibuml"]
 [ext_resource type="Texture2D" uid="uid://bsmhnfkmgaj32" path="res://Assets/textures/tv_studio_2k.hdr" id="1_yd6xl"]
 [ext_resource type="PackedScene" uid="uid://cd70x3de3pbl4" path="res://Scenes/character.tscn" id="2_ew4qk"]
 [ext_resource type="Material" uid="uid://mrjrytogu33d" path="res://Assets/materiales/suelo-material.tres" id="3_ndflb"]
@@ -27,6 +28,7 @@ size = Vector3(200, 1, 200)
 size = Vector3(275.753, 33.4111, 248.239)
 
 [node name="World" type="Node3D"]
+script = ExtResource("1_ibuml")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.216372, 0.976311, 0, -0.976311, -0.216372, 0, 0, 0)
@@ -51,6 +53,14 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 
 material_override = ExtResource("3_ndflb")
 mesh = SubResource("BoxMesh_4cwcw")
 
+[node name="puntos" type="Label" parent="."]
+offset_left = 466.0
+offset_top = 2.0
+offset_right = 600.0
+offset_bottom = 155.0
+text = "POINTS 
+"
+
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
@@ -68,7 +78,7 @@ speed = 0.1
 minXPosition = -8
 maxXPosition = 8
 start_position = Vector3(0, 2, -28)
-end_position = Vector3(0, 2, 20)
+end_position = Vector3(0, 2, 5)
 
 [node name="pileta" type="Area3D" parent="."]
 
