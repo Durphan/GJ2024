@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://d7e60gtsv8vc"]
+[gd_scene load_steps=5 format=3 uid="uid://d7e60gtsv8vc"]
 
 [ext_resource type="Script" path="res://Scripts/button_restart.gd" id="1_r7asa"]
-[ext_resource type="Script" path="res://Scripts/button_exit.gd" id="2_q3du4"]
+[ext_resource type="Script" path="res://Scenes/button_menu.gd" id="2_18x7c"]
+[ext_resource type="AudioStream" uid="uid://n77nncj2dcmw" path="res://Music/GameOverMusic.mp3" id="3_e7q7o"]
+[ext_resource type="AudioStream" uid="uid://d01dorieah6mg" path="res://Music/GameOverVoice.mp3" id="4_ud7ha"]
 
 [node name="game_over" type="CanvasLayer"]
 
@@ -11,29 +13,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -193.0
-offset_top = -35.5
-offset_right = 193.0
-offset_bottom = 35.5
+offset_left = -194.0
+offset_top = -34.0
+offset_right = 192.0
+offset_bottom = 37.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Restart"
 script = ExtResource("1_r7asa")
-
-[node name="ButtonExit" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -196.0
-offset_top = 84.0
-offset_right = 195.0
-offset_bottom = 147.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Exit"
-script = ExtResource("2_q3du4")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchors_preset = 8
@@ -49,5 +36,22 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "You have lost"
 
+[node name="ButtonMenu" type="Button" parent="."]
+offset_left = 447.0
+offset_top = 439.0
+offset_right = 833.0
+offset_bottom = 508.0
+text = "Menu"
+script = ExtResource("2_18x7c")
+
+[node name="GameOverMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_e7q7o")
+autoplay = true
+
+[node name="GameOverVoice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ud7ha")
+autoplay = true
+parameters/looping = false
+
 [connection signal="pressed" from="ButtonRestart" to="ButtonRestart" method="_on_pressed"]
-[connection signal="pressed" from="ButtonExit" to="ButtonExit" method="_on_pressed"]
+[connection signal="pressed" from="ButtonMenu" to="ButtonMenu" method="_on_pressed"]

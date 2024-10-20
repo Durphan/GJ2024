@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://djx5tresmf4aa"]
+[gd_scene load_steps=14 format=3 uid="uid://djx5tresmf4aa"]
 
 [ext_resource type="Script" path="res://Scenes/world_controller.gd" id="1_ibuml"]
 [ext_resource type="Texture2D" uid="uid://bsmhnfkmgaj32" path="res://Assets/textures/tv_studio_2k.hdr" id="1_yd6xl"]
@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://mrjrytogu33d" path="res://Assets/materiales/suelo-material.tres" id="3_ndflb"]
 [ext_resource type="PackedScene" uid="uid://yetqutcd1dba" path="res://Scenes/Muro_3d.tscn" id="4_luhai"]
 [ext_resource type="PackedScene" uid="uid://clq1p0qxusslc" path="res://Assets/modelos3D/Pool.glb" id="5_vdje0"]
+[ext_resource type="AudioStream" uid="uid://ggy6duokupcx" path="res://Music/BackgroundMusic.mp3" id="7_bsv4f"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_uo3u5"]
 panorama = ExtResource("1_yd6xl")
@@ -88,5 +89,11 @@ shape = SubResource("BoxShape3D_gj5op")
 
 [node name="Pool" parent="." instance=ExtResource("5_vdje0")]
 transform = Transform3D(-9.18908e-07, 0, -21.0222, 0, 21.0222, 0, 21.0222, 0, -9.18908e-07, -1.25069, -26.85, 20.341)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_bsv4f")
+volume_db = -2.491
+autoplay = true
+parameters/looping = true
 
 [connection signal="area_entered" from="pileta" to="Character" method="_on_area_3d_area_entered"]
