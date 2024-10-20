@@ -1,16 +1,20 @@
-[gd_scene load_steps=10 format=3 uid="uid://djx5tresmf4aa"]
+[gd_scene load_steps=12 format=3 uid="uid://djx5tresmf4aa"]
 
+[ext_resource type="Texture2D" uid="uid://bsmhnfkmgaj32" path="res://Assets/textures/tv_studio_2k.hdr" id="1_yd6xl"]
 [ext_resource type="PackedScene" uid="uid://cd70x3de3pbl4" path="res://Scenes/character.tscn" id="2_ew4qk"]
-[ext_resource type="Material" uid="uid://byhoa2glvt4rq" path="res://Resources/sky.tres" id="3_hnrcy"]
 [ext_resource type="Material" uid="uid://mrjrytogu33d" path="res://Assets/materiales/suelo-material.tres" id="3_ndflb"]
 [ext_resource type="PackedScene" uid="uid://yetqutcd1dba" path="res://Scenes/Muro_3d.tscn" id="4_luhai"]
+[ext_resource type="PackedScene" uid="uid://clq1p0qxusslc" path="res://Assets/modelos3D/Pool.glb" id="5_vdje0"]
 
-[sub_resource type="Sky" id="Sky_khtaw"]
-sky_material = ExtResource("3_hnrcy")
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_uo3u5"]
+panorama = ExtResource("1_yd6xl")
+
+[sub_resource type="Sky" id="Sky_ibptl"]
+sky_material = SubResource("PanoramaSkyMaterial_uo3u5")
 
 [sub_resource type="Environment" id="Environment_md4pe"]
 background_mode = 2
-sky = SubResource("Sky_khtaw")
+sky = SubResource("Sky_ibptl")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xkuno"]
 size = Vector3(200, 1, 200)
@@ -25,6 +29,7 @@ size = Vector3(275.753, 33.4111, 248.239)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.216372, 0.976311, 0, -0.976311, -0.216372, 0, 0, 0)
+shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_md4pe")
@@ -67,5 +72,8 @@ end_position = Vector3(0, 2, 20)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85204, -24.9556, -9.89273)
 shape = SubResource("BoxShape3D_gj5op")
+
+[node name="Pool" parent="." instance=ExtResource("5_vdje0")]
+transform = Transform3D(-9.18908e-07, 0, -21.0222, 0, 21.0222, 0, 21.0222, 0, -9.18908e-07, -1.25069, -26.85, 20.341)
 
 [connection signal="area_entered" from="Area3D" to="Character" method="_on_area_3d_area_entered"]
