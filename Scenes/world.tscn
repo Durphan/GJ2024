@@ -63,8 +63,10 @@ Show cursor - Esc
 "
 
 [node name="Muro" parent="." instance=ExtResource("4_luhai")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.048, -15.655)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01047, 0.048, -15.655)
 speed = 0.1
+minXPosition = -8
+maxXPosition = 8
 start_position = Vector3(0, 2, -28)
 end_position = Vector3(0, 2, 20)
 
