@@ -15,5 +15,5 @@
   <li>Crear el piso [🟢]</li>
   <li>Escribir la logica del personaje [🟢]</li>
   <li>Escribir la logica de la pared [🟢]</li>
-  <li>Escribir la logica para que al chocar se termine el juego [🔴]</li>
+  <li>Escribir la logica para que al caer a la pileta se termine el juego [🟢]</li>
 </ul>
