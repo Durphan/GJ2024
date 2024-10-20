@@ -15,6 +15,7 @@ sky_material = SubResource("PanoramaSkyMaterial_uo3u5")
 [sub_resource type="Environment" id="Environment_md4pe"]
 background_mode = 2
 sky = SubResource("Sky_ibptl")
+sky_rotation = Vector3(-0.188496, -4.2394, 0.181514)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xkuno"]
 size = Vector3(200, 1, 200)
@@ -62,7 +63,7 @@ Show cursor - Esc
 "
 
 [node name="Muro" parent="." instance=ExtResource("4_luhai")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03808, 0.0479698, -15.6549)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.048, -15.655)
 speed = 0.1
 start_position = Vector3(0, 2, -28)
 end_position = Vector3(0, 2, 20)

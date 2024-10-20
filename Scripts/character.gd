@@ -1,11 +1,8 @@
 extends Node3D
 
-
 var ColummnPosition = 0
 var brazoDerechoPosition = 0
 var brazoIzquierdoPosition = 0
-
-
 
 # movement/walking/jumping stuff
 const JUMP_STRENGTH = 70
@@ -33,8 +30,6 @@ var physics_bones = [] # all physical bones
 
 @onready var physical_skel : Skeleton3D = $Physical/Armature/Skeleton3D
 @onready var animated_skel : Skeleton3D = $Animated/Armature/Skeleton3D
-@onready var camera_pivot = $CameraPivot
-@onready var animation_tree = $Animated/AnimationTree
 @onready var physical_bone_body : PhysicalBone3D = $"Physical/Armature/Skeleton3D/Physical Bone Body"
 
 
@@ -56,26 +51,6 @@ var current_delta:float
 func _ready():
 	physical_skel.physical_bones_start_simulation()# activate ragdoll
 	physics_bones = physical_skel.get_children().filter(func(x): return x is PhysicalBone3D) # get all the physical bones
-	
-
-func _input(event):
-	if Input.is_action_just_pressed("ragdoll"): ragdoll_mode = bool(1-int(ragdoll_mode)) # toggle ragdoll mode
-
-	active_arm_left = Input.is_action_pressed("grab_left")# activate left arm with mouse left click
-	active_arm_right = Input.is_action_pressed("grab_right")# activate right arm with mouse right click
-	
-	if (not active_arm_left and grabbing_arm_left) or ragdoll_mode:
-		#release whatever the arm is holding when ragdoll mode or the arm is deactivate
-		grabbing_arm_left = false
-		grab_joint_left.node_a = NodePath()
-		grab_joint_left.node_b = NodePath()
-		
-	if (not active_arm_right and grabbing_arm_right) or ragdoll_mode:
-		#release whatever the arm is holding when ragdoll mode or the arm is deactivate
-		grabbing_arm_right = false
-		grab_joint_right.node_a = NodePath()
-		grab_joint_right.node_b = NodePath()
-
 
 func _physics_process(delta):
 	current_delta = delta
@@ -193,8 +168,8 @@ func brazoIzquierdo(delta:float):
 	brazoIzquierdoPosition = clampf(brazoIzquierdoPosition,-0.8,0.8)
 	$Animated/Armature/Skeleton3D.set_bone_pose_rotation(2,Quaternion(0,0,brazoIzquierdoPosition,1))
 
-
+var gameIsOver = false
 func _on_area_3d_area_entered(area: Area3D) -> void:
-	game_over() # Replace with function body.
+	print(area)
 func game_over():
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")

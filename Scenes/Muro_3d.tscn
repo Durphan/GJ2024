@@ -10,7 +10,6 @@ script = ExtResource("1_udem2")
 
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="AnimatableBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.96442)
-visible = false
 depth = 7.215
 polygon = PackedVector2Array(0.421876, 2.54815, 0.411028, 3.86803, -0.969628, 3.87954, -0.935111, 2.8498, -1.93609, 3.66093, -2.34453, 3.09141, -1.2285, 1.9121, -1.12772, 0.020884, -17, 0, -17, 8, 15, 8, 15, 0, 0.480115, -0.000412703, 0.426875, 1.63937, 1.51296, 0.915308, 1.88564, 1.35187)
 margin = 5.255
@@ -18,5 +17,29 @@ margin = 5.255
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="AnimatableBody3D"]
 material_override = ExtResource("2_4iwj7")
 use_collision = true
-polygon = PackedVector2Array(0.421876, 2.54815, 0.411028, 3.86803, -0.969628, 3.87954, -0.935111, 2.8498, -1.93609, 3.66093, -2.34453, 3.09141, -1.2285, 1.9121, -1.12772, 0.020884, -17, 0, -17, 8, 15, 8, 15, 0, 0.480115, -0.000412703, 0.426875, 1.63937, 1.51296, 0.915308, 1.88564, 1.35187)
+polygon = PackedVector2Array(0.421876, 2.54815, 0.411028, 3.86803, -0.969628, 3.87954, -0.935111, 2.8498, -1.93609, 3.66093, -2.34453, 3.09141, -1.2285, 1.9121, -1.12772, 0.020884, -27, 0, -27, 8, 27, 8, 27, 0, 0.480115, -0.000412703, 0.426875, 1.63937, 1.51296, 0.915308, 1.88564, 1.35187)
+material = ExtResource("2_4iwj7")
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="AnimatableBody3D"]
+material_override = ExtResource("2_4iwj7")
+use_collision = true
+polygon = PackedVector2Array(0.176383, 2.73965, 0.345657, 3.46291, 0.0532742, 3.90918, -0.700765, 3.86302, -1.14703, 3.41675, -1.00854, 2.78582, -2.532, 2.64732, -2.60895, 2.09333, -1.2285, 1.9121, -1.12772, 0.020884, -27, 0, -27, 8, 27, 8, 27, 0, 0.330268, 0.0312659, 0.330268, 1.87789, 1.80757, 1.8625, 1.94607, 2.60115)
+material = ExtResource("2_4iwj7")
+
+[node name="CSGPolygon3D3" type="CSGPolygon3D" parent="AnimatableBody3D"]
+material_override = ExtResource("2_4iwj7")
+use_collision = true
+polygon = PackedVector2Array(0.176383, 2.73965, 0.296572, 3.41761, 0.0532742, 3.90918, -0.700765, 3.86302, -1.14703, 3.41675, -0.976928, 2.63883, -2.09213, 3.30796, -2.22789, 2.92976, -1.2285, 1.9121, -1.12772, 0.020884, -27, 0, -27, 8, 27, 8, 27, 0, 0.330268, 0.0312659, 0.274038, 1.68849, 1.13711, 1.02907, 1.525, 1.45575)
+material = ExtResource("2_4iwj7")
+
+[node name="CSGPolygon3D4" type="CSGPolygon3D" parent="AnimatableBody3D"]
+material_override = ExtResource("2_4iwj7")
+use_collision = true
+polygon = PackedVector2Array(0.176383, 2.73965, 0.296572, 3.41761, 0.0532742, 3.90918, -0.700765, 3.86302, -1.14703, 3.41675, -0.976928, 2.63883, -2.54742, 1.62592, -2.37815, 1.24121, -1.2285, 1.9121, -1.12772, 0.020884, -27, 0, -27, 8, 27, 8, 27, 0, 0.330268, 0.0312659, 0.267211, 2.12981, 1.68109, 2.55963, 1.34176, 3.09125)
+material = ExtResource("2_4iwj7")
+
+[node name="CSGPolygon3D5" type="CSGPolygon3D" parent="AnimatableBody3D"]
+material_override = ExtResource("2_4iwj7")
+use_collision = true
+polygon = PackedVector2Array(0.176383, 2.73965, 0.296572, 3.41761, 0.0532742, 3.90918, -0.700765, 3.86302, -1.14703, 3.41675, -0.976928, 2.63883, -2.04024, 3.46451, -2.28909, 3.07994, -1.2285, 1.9121, -1.12772, 0.020884, -27, 0, -27, 8, 27, 8, 27, 0, 0.330268, 0.0312659, 0.267211, 2.12981, 1.44356, 3.00076, 0.991119, 3.43058)
 material = ExtResource("2_4iwj7")
