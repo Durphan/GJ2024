@@ -18,6 +18,7 @@ sky_material = SubResource("PanoramaSkyMaterial_uo3u5")
 background_mode = 2
 sky = SubResource("Sky_ibptl")
 sky_rotation = Vector3(-0.188496, -4.2394, 0.181514)
+ambient_light_source = 1
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xkuno"]
 size = Vector3(200, 1, 200)
@@ -32,8 +33,9 @@ size = Vector3(275.753, 33.4111, 248.239)
 script = ExtResource("1_ibuml")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.216372, 0.976311, 0, -0.976311, -0.216372, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.48664, 0.873603, 0, -0.873603, 0.48664, 0, 4.28473, 0)
 shadow_enabled = true
+shadow_opacity = 0.5
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_md4pe")
